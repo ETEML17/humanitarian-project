@@ -12,7 +12,7 @@ header {
     border-bottom: 0.5em solid orange;
 }
 
-#name {
+#title {
     font-weight: bold;
     float: left;
     margin-right: 50px;
@@ -22,12 +22,12 @@ header {
     float: right;
 }
 
-#container {
+#flex-container {
     background-color: #151515;
     display: inline-block;
 }
 
-#name, #menu {
+#title, #menu {
     display: inline-block;
 }
 
@@ -50,12 +50,13 @@ nav ul li {
 }
 
 nav a {
+    font-size: 16px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
 
-#name a:hover {
+#title a:hover {
     color: orange;
     text-decoration: none;
 }
@@ -64,16 +65,64 @@ nav a {
     color: orange;
 }
 
-section {
+#burger-menu {
+    display: none;
+}
+
+section, #carousel {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto; /* Cette règle centrer les sections sur la page */
     padding: 20px;
 }
 
-h2 {
-    color: #E03C31;
+section ul {
+    text-align: left;
+    list-style: none;
 }
+
+.carousel-inner .carousel-item img {
+    margin: 0 auto;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top: 210px;
+    height: 40px;
+    background: lightgrey;
+    width: 2%;
+}
+
+.carousel-control-prev {
+    left: 280px;
+}
+
+.carousel-control-next {
+    right: 280px;
+}
+
+.img-mobile {
+    display: none;
+}
+
+h2 {
+    color: orange;
+}
+
+h2::before,
+h2::after {
+    overflow: hidden;
+    content: "-";
+    color: orange;
+}
+
+h2::before {
+    margin-right: 10px;
+}
+
+h2::after {
+    margin-left: 10px;
+}
+
 
 #cta {
     padding: 2em 1em;
@@ -97,19 +146,43 @@ section img {
     color: #fff;
 }
 
-#cta .cta-button,
-#contact .cta-button {
+#cta .cta-button:hover {
+    color: white;
+}
+
+#cta .cta-button, #contact .cta-button, #event .cta-button {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
-    background-color: #001489;
+    background-color: orange;
     border-radius: 5px;
     font-weight: bold;
 }
 
 #social img {
-   width: 3%;
+   width: 4%;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    height: 42px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background-color: #007749;
+    color: pink;
 }
 
 footer {
@@ -120,4 +193,96 @@ footer {
     width: 100%;
     padding: 20px;
     margin-top: 20px
+}
+
+/* Mobile */
+@media (max-width: 797px) {
+    header {
+        padding: 1em 0;
+    }
+    nav ul, #back-to-top {
+        display: none;
+    }
+
+    #flex-container {
+        display: flex;
+    }
+
+    #flex-container > div {
+        margin: 10px;
+        padding: 0 14px 0 20px;
+    }
+
+    #title {
+        margin-right: 0;        
+    }
+
+    #title a {
+        font-size: 24px;
+        display: inline-block;
+    }
+
+    #burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
+    #menu {
+        display: none;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        top: 115px; /* Ajustez selon votre mise en page */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu li {
+        padding: 10px;
+    }
+    
+    #menu li a {
+        display: block;
+        text-align: left;
+        margin-left: 30px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    #carousel {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    #cta img {
+        width: 30%;
+    }
+
+    #social img {
+        width: 15%;
+    }
+
+    #back-to-top {
+        display: none !important;
+    }
+
+    #fix-mobile-bottom {
+        height: 355px;
+        background-color: #fff;
+    }
 }

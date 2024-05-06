@@ -4,39 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <meta name="description" content="Hope In Box est une association humanitaire qui envoie des conteneurs remplis de fournitures et matériels scolaires.">
+    <meta name="keywords" content="Hope In Box, association humanitaire, conteneurs, fournitures scolaires, matériel éducatif, association, humanitaire, Afrique du Sud, caritatif, Ikhwezi Educare">
+    <meta name="author" content="Hope In Box">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/hopeinbox_logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <title>Hope in Box</title>
+    <script src="js/script.js"></script>
+    <title>Hope In Box</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <div id="container">
-                <div id="name">
-                    <a href="#">Hope in Box</p>
+            <div id="flex-container">
+                <div id="burger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
-                <div id="menu">
-                    <ul>
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#mission">Qui sommes nous ?</a></li>
-                        <li><a href="#projets">Projet</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#social">Social</a></li>
-                    </ul>
-                </div>
+                <div id="title">
+                    <a href="#">Hope In Box</p>
+                </div>            
+                <ul id="menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#mission">Qui sommes nous ?</a></li>
+                    <!--<li><a href="#event">Evènement</a></li>-->
+                    <li><a href="#projets">Projet</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#social">Réseaux sociaux</a></li>
+                </ul>
             </div>
         </nav>
     </header>
 
     <section id="cta">
-        <img src="resources/hopeinbox_logo.png" alt="logo association Hope in Box">
+        <a href="https://www.helloasso.com/associations/hope-in-box">
+            <img src="resources/hopeinbox_logo.png" alt="logo association Hope In Box">
+        </a>
         <h2>Soutenez-nous !</h2>
-        <a href="https://www.helloasso.com/associations/hope-in-box/evenements/soiree-au-espritchupitos-21-12-2023"
-            class="cta-button">Faire un don</a>
+        <a href="#" onclick="makeDonation()" class="cta-button">Faire un don</a>
+    </section>
+
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-50" src="resources\hopeinbox1.webp" alt="First slide" width="580px" height="420px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50" src="resources\hopeinbox2.webp" alt="Second slide" width="580px" height="420px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50" src="resources\hopeinbox3.webp" alt="Third slide" width="580px" height="420px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50" src="resources\hopeinbox4.webp" alt="Fourth slide" width="580px" height="420px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-50" src="resources\hopeinbox10.webp" alt="fift slide" width="580px" height="420px">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+    
+    <section id="event">
+    <!--
+        <h2>Evènements</h2>
+        <p></p>
+        <p></p>
+        <a href="#" onclick="participateToEvent()" class="cta-button">Je participe !</a>
+    -->
     </section>
 
     <section id="mission">
@@ -45,6 +96,8 @@
             proches amis.
             Le projet Hope in Box a germé dans les esprits de ses fondateurs il y a plus d'une décennie, porté par une
             volonté profonde d'apporter une aide concrète aux communautés dans le besoin.</p>
+        <img class="img-mobile" src="resources\hopeinbox4.webp" alt="Third slide">
+    
         <p>Son objectif principal est de répondre aux nécessités de communautés en envoyant des conteneurs remplis de
             fournitures scolaires et de matériels, et qui seront ultérieurement utilisés
             (en classe, rangement, cantine, bureaux ou encore unités médicales mobiles). Ce n'est que récemment que
@@ -53,40 +106,63 @@
             significatif. Cette réalisation marque le début d'un engagement durable et concret pour Hope in Box,
             soulignant la persévérance et de la solidarité pour transformer des idées altruistes en actions tangibles
             qui laisseront une empreinte positive dans les communautés qui en bénéficient.</p>
+        <img class="img-mobile" src="resources\hopeinbox1.webp" alt="Third slide">
 
         <p>À travers des liens familiaux et amicaux forts, l'approche de Hope in Box incarne un engagement profond
             envers la solidarité, portant en elle le désir de créer un changement positif durable dans
             les régions qui en ont le plus besoin. Cette démarche reflète la forte volonté de l'association d'apporter
             un soutien concret et durable, en offrant des ressources essentielles là où elles sont nécessaires,
             éclairant ainsi le chemin vers un avenir plus lumineux pour ceux qui en ont le plus besoin.</p>
-        <!-- Ajoutez plus de détails sur votre mission ici -->
-        <!-- <img src="resources/pexels-frans-van-heerden-632470.jpg" alt="Image d'accueil">-->
+        
+        <ul>
+            <p>Présenation de l'équipe :</p>
+            <li><b>Romuald</b> - Président</li>
+            <li><b>Delphine</b> - Trésorière</li>
+            <li><b>Emma</b> - Secrétaire</li>
+            <li><b>Cécile, Christophe, Jérôme et Véronique</b> - Bénévoles actifs de l'association</li>
+        </ul>
     </section>
 
     <section id="projets">
-        <h2>Objectif du projet </h2>
-        <p>Récolter des fonds cruciaux pour l’association Hope in Box, engagée dans l'envoi de conteneurs remplis de matériel éducatif,
-            de livres et de fournitures essentielles à une école spécifique en Afrique du Sud. Chaque contribution compte !</p>
-        <!-- Ajoutez des détails sur vos projets ici -->
-        <!-- <img src="resources/pexels-olia-danilevich-5088017.jpg" alt="Image du projet"> -->
+        <h2>Présentation du 1er Projet : Un conteneur pour <b>Ikhwezi Educare</b></h2>
+        <p>Le tout premier projet de Hope in Box est centré sur l'envoi d'un conteneur à l'école Ikhwezi Educare, une école maternelle située dans le canton de Xolanaledi à Grabouw, dans le Cap occidental en Afrique du Sud. En choisissant cette école, qui s’attache à apporter une éducation scolaire ainsi qu’un accompagnement social et médical à plus de 150 enfants en situation plus que précaire, l'association aspire à contribuer au développement éducatif et social de la communauté locale, en fournissant des équipements et des fournitures qui peuvent avoir un impact significatif sur la vie des enfants et de leurs enseignants. 
+            Ce premier conteneur est bien plus qu'un envoi matériel; il incarne l'espoir, l'amour et la détermination qui alimentent la mission humanitaire de l'association. C'est le commencement d'une aventure où chaque geste compte et où l'impact sur la vie des autres transcende les frontières, un conteneur à la fois.</p>
+        <img class="img-mobile" src="resources\hopeinbox3.webp" alt="Third slide">
+
+        <h2>Avancés du projet</h2>
+        <ul>
+            <li>25 bureaux double d'écoliers</li>
+            <li>2 Tableaux blancs</li>
+            <li>1 photocopieur professionel</li>
+            <li>1 ordinateur portable</li>
+            <li>Plusieurs trotinnettes & vélos</li>
+            <li>1 toboggan d'enfants</li>
+        </ul>
+        <img class="img-mobile" src="resources\hopeinbox10.webp" alt="Third slide">
     </section>
 
     <section id="contact">
-        <h2>Contact </h2>
+        <h2>Contact</h2>
         <p>Rejoignez-nous dans notre quête pour un monde meilleur.</p>
-        <a href="mailto:romuald@weltek.fr" class="cta-button">Contactez-nous <span
-                class="glyphicon glyphicon-envelope"></span></a>
+        <a href="mailto:romuald@weltek.fr" class="cta-button">Contactez-nous<span
+            class="glyphicon glyphicon-envelope"></span></a>
     </section>
-
+    <section id="contact">
+        <img class="img-mobile" src="resources\hopeinbox2.webp" alt="Third slide">
+    </section>
     <section id="social">
         <h2>Suivez-nous !</h2>
         <a href="https://www.instagram.com/galahopeinbox/" target="_blank" rel="noopener noreferrer">
-            <img src="resources/instagram logo_icon_256px.png" alt="Instagram"></a>
+        <img src="resources/instagram logo_icon_256px.png" alt="Instagram"></a>
     </section>
 
-    <footer>
-        <p>&copy; 2023 Association Humanitaire. Tous droits réservés.</p>
-    </footer>
-</body>
+    <button id="back-to-top" title="Haut de page">
+        <span>&#10084;</span>
+    </button>
 
+    <footer>
+        &copy; <span id="footer"></span> Hope in Box. Tous droits réservés.
+    </footer>
+    <div id="fix-mobile-bottom"></div>
+</body>
 </html>
