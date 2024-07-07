@@ -160,8 +160,8 @@ section img {
     font-weight: bold;
 }
 
-#social img {
-   width: 4%;
+#qr-code {
+    width: 25%
 }
 
 #back-to-top {
@@ -273,8 +273,9 @@ footer {
         width: 30%;
     }
 
-    #social img {
-        width: 15%;
+
+    #qr-code {
+        width: 60%;
     }
 
     #back-to-top {
